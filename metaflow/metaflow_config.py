@@ -86,6 +86,9 @@ CLIENT_CACHE_MAX_TASKDATASTORE_COUNT = from_conf(
 # Datatools (S3) configuration
 ###
 S3_ENDPOINT_URL = from_conf("S3_ENDPOINT_URL")
+# In some case the S3 endpoint URL is different for the local metaflow client and
+# the metaflow code running in a remote environment.
+S3_ENDPOINT_INTERNAL_URL = from_conf("S3_ENDPOINT_INTERNAL_URL")
 S3_VERIFY_CERTIFICATE = from_conf("S3_VERIFY_CERTIFICATE")
 
 # Set ServerSideEncryption for S3 uploads

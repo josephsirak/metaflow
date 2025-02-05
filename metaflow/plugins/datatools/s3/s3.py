@@ -16,6 +16,7 @@ from metaflow.metaflow_current import current
 from metaflow.metaflow_config import (
     DATATOOLS_S3ROOT,
     S3_RETRY_COUNT,
+    S3_ENDPOINT_INTERNAL_URL,
     S3_TRANSIENT_RETRY_COUNT,
     S3_SERVER_SIDE_ENCRYPTION,
     TEMPDIR,

@@ -35,6 +35,7 @@ from metaflow.metaflow_config import (
     KUBERNETES_SANDBOX_INIT_SCRIPT,
     OTEL_ENDPOINT,
     S3_ENDPOINT_URL,
+    S3_ENDPOINT_INTERNAL_URL,
     S3_SERVER_SIDE_ENCRYPTION,
     SERVICE_HEADERS,
     KUBERNETES_SECRETS,
@@ -267,6 +268,9 @@ class Kubernetes(object):
                 "METAFLOW_AZURE_KEY_VAULT_PREFIX", AZURE_KEY_VAULT_PREFIX
             )
             .environment_variable("METAFLOW_S3_ENDPOINT_URL", S3_ENDPOINT_URL)
+            .environment_variable(
+                "METAFLOW_S3_ENDPOINT_INTERNAL_URL", S3_ENDPOINT_INTERNAL_URL
+            )
             .environment_variable(
                 "METAFLOW_AZURE_STORAGE_BLOB_SERVICE_ENDPOINT",
                 AZURE_STORAGE_BLOB_SERVICE_ENDPOINT,
@@ -570,6 +574,9 @@ class Kubernetes(object):
                 "METAFLOW_AZURE_KEY_VAULT_PREFIX", AZURE_KEY_VAULT_PREFIX
             )
             .environment_variable("METAFLOW_S3_ENDPOINT_URL", S3_ENDPOINT_URL)
+            .environment_variable(
+                "METAFLOW_S3_ENDPOINT_INTERNAL_URL", S3_ENDPOINT_INTERNAL_URL
+            )
             .environment_variable(
                 "METAFLOW_AZURE_STORAGE_BLOB_SERVICE_ENDPOINT",
                 AZURE_STORAGE_BLOB_SERVICE_ENDPOINT,

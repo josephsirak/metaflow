@@ -42,6 +42,7 @@ from metaflow.metaflow_config import (
     KUBERNETES_SANDBOX_INIT_SCRIPT,
     KUBERNETES_SECRETS,
     S3_ENDPOINT_URL,
+    S3_ENDPOINT_INTERNAL_URL,
     S3_SERVER_SIDE_ENCRYPTION,
     SERVICE_HEADERS,
     SERVICE_INTERNAL_URL,
@@ -1736,6 +1737,7 @@ class ArgoWorkflows(object):
             )
             # add METAFLOW_S3_ENDPOINT_URL
             env["METAFLOW_S3_ENDPOINT_URL"] = S3_ENDPOINT_URL
+            env["METAFLOW_S3_ENDPOINT_INTERNAL_URL"] = S3_ENDPOINT_INTERNAL_URL
 
             # support Metaflow sandboxes
             env["METAFLOW_INIT_SCRIPT"] = KUBERNETES_SANDBOX_INIT_SCRIPT
